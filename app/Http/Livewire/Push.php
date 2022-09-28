@@ -21,12 +21,12 @@ class Push extends Component
 
     public function render()
     {
-        $avisos = AViso::paginate(10);
+        $avisos = Aviso::paginate(10);
         return view('livewire.push', compact('avisos'))
             ->layout('restrict.avisos');
     }
 
-    public function sotre()
+    public function store()
     {
         $this->validate();
 
